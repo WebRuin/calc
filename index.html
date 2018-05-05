@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    class calc {
+      constructor() {
+        this.ans = 0;
+        this.add = this.add.bind(this);
+        this.subtract = this.subtract.bind(this);
+        this.multipy = this.multipy.bind(this);
+        this.divide = this.divide.bind(this);
+        this.equal = this.equal.bind(this);
+      }
+
+      set add(num) {
+        this.ans = this.ans + num;
+      }
+      
+      set subtract(num) {
+        this.ans = this.ans - num;
+      }
+
+      set multiply(num) {
+        this.ans = this.ans * num;
+      }
+
+      set divide(num) {
+        this.ans = this.ans / num;
+      }
+      
+      get equal() {
+        console.log(`Ans: ${this.ans}`);
+        return this.ans;
+      }
+    }
+  </script>
+</body>
+</html>
